@@ -151,6 +151,24 @@ body {
   }
 }
 
+@keyframes moving-arrow {
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+
 /* Header */
 
 header {
@@ -417,4 +435,216 @@ header .mega-menu .links li i {
   }
 }
 
-/* Articels */
+/* Articles */
+
+.articles {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.articles .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.articles .box {
+  background-color: white;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.articles .box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+
+.articles .box img {
+  max-width: 100%;
+}
+
+.articles .box .content {
+  padding: 20px;
+}
+
+.articles .box .content h3 {
+  margin: 0;
+}
+
+.articles .box .content p {
+  margin: 10px 0 0;
+  line-height: 1.5;
+  color: #777;
+}
+
+.articles .box .info {
+  padding: 20px;
+  border-top: 1px solid #e6e6e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articles .box .info a {
+  color: #2196f3;
+  font-weight: bold;
+}
+
+.articles .box .info i {
+  color: #2196f3;
+}
+
+.articles .box:hover .info i {
+  animation: moving-arrow 0.6s linear infinite;
+}
+
+/* Gallery */
+
+.gallery {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #ececec;
+}
+
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.gallery .box {
+  padding: 12px;
+  background-color: white;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+
+.gallery .box .image {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery .box .image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255 255 255 / 20%);
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  z-index: 2;
+}
+
+.gallery .box .image:hover::before {
+  animation: flashing 0.7s;
+}
+
+.gallery .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+
+.gallery .box .image:hover img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+/* Features */
+
+.features {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.features .box {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.features .box .img-holder {
+  position: relative;
+  overflow: hidden;
+}
+
+.features .box .img-holder::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(62, 61, 62, 0.7);
+}
+
+.features .box .img-holder::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 0 170px 500px;
+  border-color: transparent transparent white transparent;
+}
+
+.features .box .img-holder img {
+  max-width: 100%;
+}
+
+.features .box h2 {
+  position: relative;
+  font-size: 40px;
+  width: fit-content;
+  margin: auto;
+}
+
+.features .box h2::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: -12px;
+  height: 3px;
+  width: calc(100% - 30px);
+  background-color: #03a9f4;
+}
+
+.features .box p {
+  line-height: 1.8;
+  font-size: 20px;
+  margin: 30px 0;
+  padding: 25px;
+  color: #777;
+}
+
+.features .box a {
+  display: block;
+  border: 2px solid #03a9f4;
+  color: #03a9f4;
+  width: fit-content;
+  margin: 0 auto 30px;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.features .box:hover a {
+  background-color: #03a9f4;
+  color: white;
+}
