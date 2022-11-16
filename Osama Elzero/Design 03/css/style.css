@@ -885,12 +885,13 @@ header .mega-menu .links li i {
   left: 0;
   top: 0;
   height: 100%;
-  width: 95px;
+  width: 80px;
   font-size: 30px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 15px;
 }
 
 .services .box .info::after {
