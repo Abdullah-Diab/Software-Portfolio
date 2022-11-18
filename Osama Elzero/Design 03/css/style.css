@@ -169,6 +169,16 @@ body {
   }
 }
 
+@keyframes change-background {
+  0%,
+  1000% {
+    background-image: url("../image/discount-background1.jpg");
+  }
+  50% {
+    background-image: url("../image/discount-background2.jpg");
+  }
+}
+
 /* Header */
 
 header {
@@ -1495,4 +1505,245 @@ header .mega-menu .links li i {
 .stats .box .text {
   font-weight: bold;
   font-size: 20px;
+}
+
+/* Discount */
+
+.discount {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.discount .image {
+  background-image: url(../image/discount-background1.jpg);
+  background-size: cover;
+  color: white;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  animation: change-background 10s linear infinite;
+}
+
+.discount .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgb(23 135 224 / 97%);
+}
+
+.discount .content {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.discount .content h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.discount .content p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.discount .content img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.discount .form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+}
+
+.discount .form .input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+  caret-color: #03a9f4;
+}
+
+.discount .form textarea.input {
+  resize: none;
+  height: 200px;
+}
+
+.discount .form .input:focus {
+  outline: none;
+}
+
+.discount .form [type="submit"] {
+  width: 100%;
+  display: block;
+  padding: 15px;
+  color: white;
+  background-color: #2196f3;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.discount .form [type="submit"]:hover {
+  background-color: #03a9f4;
+}
+
+@media (max-width: 991px) {
+  .discount .image {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .discount .form {
+    flex-basis: 100%;
+    padding-bottom: 30px;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background-color: #191919;
+  padding: 70px 0 0;
+}
+
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer .box h3 {
+  color: white;
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+
+.footer .box .social {
+  display: flex;
+}
+
+.footer .box .social li {
+  margin-right: 10px;
+}
+
+.footer .box .social li a {
+  background-color: #313131;
+  color: #b9b9b9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.footer .box .social .facebook:hover {
+  background-color: #1877f2;
+  color: white;
+}
+
+.footer .box .social .twitter:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.footer .box .social .youtube:hover {
+  background-color: #ff0000;
+  color: white;
+}
+
+.footer .box .text {
+  line-height: 2;
+  color: #b9b9b9;
+  margin-top: 20px;
+}
+
+.footer .box .links li {
+  padding: 15px 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer .box .links li:not(last-child) {
+  border-bottom: 1px solid #444;
+}
+
+.footer .box .links li:hover {
+  padding-left: 10px;
+}
+
+.footer .box .links li a {
+  color: #b9b9b9;
+  transition: 0.3s;
+}
+
+.footer .box .links li a::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: #2196f3;
+}
+
+.footer .box .links li:hover a {
+  color: white;
+}
+
+.footer .box .line {
+  display: flex;
+  align-items: center;
+  color: #b9b9b9;
+  margin-bottom: 30px;
+}
+
+.footer .box .line i {
+  font-size: 25px;
+  color: #2196f3;
+  margin-right: 10px;
+}
+
+.footer .box .line .info {
+  line-height: 1.8;
+  flex: 1;
+}
+
+.footer .footer-gallery img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin: 50px 0 0;
+  border-top: 1px solid #444;
+  font-size: 18px;
+}
+
+.footer .copyright span {
+  color: #2196f3;
+  font-weight: bold;
 }
