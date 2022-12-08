@@ -396,3 +396,146 @@ body {
 .quick-draft input[type="submit"] {
   margin-bottom: 0;
 }
+
+/* Targets */
+
+.targets {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.targets h2 {
+  margin-bottom: 10px;
+}
+
+.targets p {
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 16px;
+}
+
+.target-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.target-row .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.target-row .details {
+  flex: 1;
+}
+
+.target-row .details .progress {
+  position: relative;
+  height: 5px;
+}
+
+.target-row .details .progress-1 {
+  background-color: #0075ff33;
+}
+
+.target-row .details .progress-2 {
+  background-color: #f59e0b33;
+}
+
+.target-row .details .progress-3 {
+  background-color: #22c55e33;
+}
+
+.target-row .details > span {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.target-row .details .number {
+  font-size: 16px;
+  color: #888;
+}
+
+.target-row .details .number {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.target-row .details .progress > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.target-row .details .progress > span span {
+  position: absolute;
+  bottom: 16px;
+  right: -16px;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.target-row .details .progress > span span::after {
+  content: "";
+  border-color: transparent;
+  border-width: 5px;
+  border-style: solid;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.target-row .details .progress-1 > span,
+.target-row .details .progress-1 > span span {
+  background-color: #0075ff;
+}
+
+.target-row .details .progress-2 > span,
+.target-row .details .progress-2 > span span {
+  background-color: #f59e0b;
+}
+
+.target-row .details .progress-3 > span,
+.target-row .details .progress-3 > span span {
+  background-color: #22c55e;
+}
+
+.target-row .details .progress-1 > span span::after {
+  border-top-color: #0075ff;
+}
+
+.target-row .details .progress-2 > span span::after {
+  border-top-color: #f59e0b;
+}
+
+.target-row .details .progress-3 > span span::after {
+  border-top-color: #22c55e;
+}
+
+.blue .icon {
+  color: #0075ff;
+  background-color: #0075ff33;
+}
+
+.orange .icon {
+  color: #f59e0b;
+  background-color: #f59e0b33;
+}
+
+.green .icon {
+  color: #22c55e;
+  background-color: #22c55e33;
+}
