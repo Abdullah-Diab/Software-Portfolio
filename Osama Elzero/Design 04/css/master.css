@@ -35,6 +35,26 @@ body {
   background-color: #0d69d5;
 }
 
+/* Components */
+
+.btn-shape {
+  display: block;
+  font-size: 14px;
+  background-color: #0075ff;
+  color: white;
+  border: none;
+  width: fit-content;
+  margin: 0 15px 15px auto;
+  transition: 0.3s;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn-shape:hover {
+  background-color: #0d69d5;
+}
+
 .page {
   display: flex;
   background-color: #f1f5f9;
@@ -243,7 +263,7 @@ body {
 
 .wrapper .welcome {
   background-color: white;
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -298,22 +318,6 @@ body {
   font-weight: normal;
 }
 
-.wrapper .welcome a {
-  display: block;
-  font-size: 14px;
-  background-color: #0075ff;
-  color: white;
-  width: fit-content;
-  margin: 0 15px 15px auto;
-  transition: 0.3s;
-  border-radius: 6px;
-  padding: 8px 12px;
-}
-
-.wrapper .welcome a:hover {
-  background-color: #0d69d5;
-}
-
 @media (max-width: 767px) {
   .wrapper {
     grid-template-columns: minmax(200px, 1fr);
@@ -346,4 +350,49 @@ body {
   .wrapper .welcome .body > div:not(:last-child) {
     margin-bottom: 20px;
   }
+}
+
+/* Quick Draft */
+
+.quick-draft {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.quick-draft h2 {
+  margin-bottom: 10px;
+}
+
+.quick-draft p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #888;
+}
+
+.quick-draft input[type="text"] {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #eee;
+  border-radius: 6px;
+}
+
+.quick-draft textarea {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  resize: none;
+  background-color: #eee;
+  border-radius: 6px;
+  width: 100%;
+  height: 125px;
+}
+
+.quick-draft input[type="submit"] {
+  margin-bottom: 0;
 }
