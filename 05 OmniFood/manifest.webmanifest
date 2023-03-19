@@ -1,0 +1,9 @@
+{
+  "icon": [
+    {
+      "src": "img/android-touch-icon-192.png",
+      "type": "img/png",
+      "size": "192x192"
+    }
+  ]
+}
